@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: linear-gradient(135deg, #e0f2fe, #f0fdf4), 
+              url('https://images.unsplash.com/photo-1527566312341-5e3b0ca0c9f5?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.header-img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: auto;
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+.chat {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  padding: 15px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.msg {
+  margin: 12px 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.user {
+  background: #dbeafe;
+  text-align: right;
+  margin-left: auto;
+  color: #1e40af;
+}
+
+.bot {
+  background: #dcfce7;
+  text-align: left;
+  margin-right: auto;
+  color: #065f46;
+}
+
+.typing-indicator {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 5px 0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.input-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
