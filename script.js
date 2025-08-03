@@ -12,7 +12,7 @@ async function sendMessage() {
   typing.style.display = "block";         // Show typing indicator
 
   try {
-    const response = await fetch("https://mindease-zzv9.onrender.com", {
+    const response = await fetch("https://mindease-rbd4.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message })
@@ -49,3 +49,4 @@ document.getElementById("userInput").addEventListener("keypress", function (e) {
   }
 
 });
+
